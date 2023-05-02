@@ -2,7 +2,7 @@ import torch
 from torch import nn
 import numpy as np
 
-class myConv1d():
+class Conv1d():
     def __init__(self, in_channels: int, out_channels: int, kernel_size: int, stride: int = 1) -> None:
         self.in_channels = in_channels
         self.out_channels = out_channels
@@ -27,7 +27,7 @@ class myConv1d():
         calculated += self.bias.reshape((self.out_channels, 1))
         return calculated
 
-class myConv2d():
+class Couv2d():
     def __init__(self, in_channels: int, out_channels: int, kernel_size: tuple[int, int], stride: int = 1, bias: bool = True) -> None:
         self.in_channels = in_channels
         self.out_channels = out_channels
@@ -60,7 +60,7 @@ class myConv2d():
         if self.use_bias:
             self.bias.grad.zero_()
 
-class myConv3d():
+class Conv3d():
     def __init__(self, in_channels: int, out_channels: int, kernel_size: tuple[int, int, int], stride: int = 1, bias: bool = True) -> None:
         self.in_channels = in_channels
         self.out_channels = out_channels
@@ -106,7 +106,7 @@ class myConv3d():
         if self.use_bias:
             self.bias.grad.zero_()
 
-class myConv4d():
+class Conv4d():
     def __init__(self, in_channels: int, out_channels: int, kernel_size: tuple[int, int, int, int], stride: int = 1, bias: bool = True) -> None:
         self.in_channels = in_channels
         self.out_channels = out_channels

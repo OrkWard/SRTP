@@ -27,7 +27,7 @@ class Conv1d():
         calculated += self.bias.reshape((self.out_channels, 1))
         return calculated
 
-class Couv2d():
+class Conv2d():
     def __init__(self, in_channels: int, out_channels: int, kernel_size: tuple[int, int], stride: int = 1, bias: bool = True) -> None:
         self.in_channels = in_channels
         self.out_channels = out_channels
